@@ -1,18 +1,28 @@
 "use strict";
 
-const gulp = require('gulp');
-const concat = require('gulp-concat');
+// const gulp = require('gulp');
+import gulp from 'gulp';
+// const concat = require('gulp-concat');
+import concat from 'gulp-concat';
 const autoprefixer = require('gulp-autoprefixer');
-const cleanCSS = require('gulp-clean-css');
+const cleanCSS = require('gulp-clean-css'); // попробовать новую запись
 // const rename = require("gulp-rename");
 const uglify = require('gulp-uglify-es').default;
 const del = require('del');
 const browserSync = require('browser-sync').create(); 
+const sourcemaps = require('gulp-sourcemaps');
+const sass = require('gulp-sass');
 
-//Порядок подключения css файлов
+/*//Порядок подключения css файлов
 const cssFiles = [
 	'./src/css/main.css',
 	'./src/css/media.css',
+] */
+
+//Порядок подключения SCSS файлов
+const styleFiles = [
+	'./src/css/main.scss',
+	'./src/css/media.scss',
 ]
 
 //Порядок подключения js файлов
@@ -23,8 +33,9 @@ const jsFiles = [
 
 //Таск на стили
 function styles() {
-	return gulp.src(cssFiles)
-
+	return gulp.src(styleFiles)
+	.pipe(sourcemaps.init())
+	.pipe(sass())
 	.pipe(concat('style.css'))
 	//Добавить префиксы
 	.pipe(autoprefixer({
@@ -35,6 +46,7 @@ function styles() {
 	.pipe(cleanCSS({
 		level: 2
 	}))
+	.pipe(sourcemaps.write('./'))
 	//Выходная папка для стилей
 	.pipe(gulp.dest('./build/css'))
 	.pipe(browserSync.stream());
@@ -62,8 +74,8 @@ function watch() {
             baseDir: "./"
         }
     });
-    //watch CSS
-gulp.watch('./src/css/**/*.css', styles);  
+    //watch SCSS
+gulp.watch('./src/css/**/*.scss', styles);  
 	//watch JS
 gulp.watch('./src/js/**/*.js', styles);    
 	//wathc HTML
