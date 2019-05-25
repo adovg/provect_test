@@ -1,17 +1,18 @@
-"use strict";
+// "use strict";
 
-// const gulp = require('gulp');
-import gulp from 'gulp';
-// const concat = require('gulp-concat');
-import concat from 'gulp-concat';
+const gulp = require('gulp');
+// import gulp from 'gulp';
+const concat = require('gulp-concat');
+
 const autoprefixer = require('gulp-autoprefixer');
-const cleanCSS = require('gulp-clean-css'); // попробовать новую запись
+const cleanCSS = require('gulp-clean-css');
 // const rename = require("gulp-rename");
 const uglify = require('gulp-uglify-es').default;
 const del = require('del');
 const browserSync = require('browser-sync').create(); 
 const sourcemaps = require('gulp-sourcemaps');
 const sass = require('gulp-sass');
+const imagemin = require('gulp-imagemin');
 
 /*//Порядок подключения css файлов
 const cssFiles = [
@@ -67,6 +68,21 @@ function scripts() {
   	.pipe(browserSync.stream());
 };
 
+// gulp.task('img-minification', () => {
+// 	return gulp.src('./src/img/**')
+// 	.pipe(imagemin({
+// 		progressive: true
+// 	}))
+// 	.pipe(gulp.dest('./build/img/'))	
+// });
+
+function img() {
+	return gulp.src('./src/img/**')
+	.pipe(imagemin({
+		progressive: true
+	}))
+	.pipe(gulp.dest('./build/img/'))
+}
 //Task to watch 
 function watch() {
 	browserSync.init({
@@ -80,6 +96,8 @@ gulp.watch('./src/css/**/*.scss', styles);
 gulp.watch('./src/js/**/*.js', styles);    
 	//wathc HTML
 gulp.watch('./*.html').on('change', browserSync.reload);
+//watch IMG
+gulp.watch('./src/img/**', gulp.series('img'));
 };
 
 //Task for clean
@@ -91,5 +109,6 @@ gulp.task('styles', styles);
 gulp.task('scripts', scripts);
 gulp.task('del', clean);
 gulp.task('watch', watch);
-gulp.task('build', gulp.series(clean, gulp.parallel(styles, scripts)));
+gulp.task('img', imagemin);
+gulp.task('build', gulp.series(clean, gulp.parallel(styles, scripts, img)));
 gulp.task('dev', gulp.series('build', 'watch'));
