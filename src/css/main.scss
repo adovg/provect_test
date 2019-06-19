@@ -26,7 +26,7 @@ body {
 	flex-direction: row;
 	//max-width: 600px;
 
-	justify-content: center;
+	justify-content: space-evenly;
 	text-align: center;
 	align-content: center;
 	line-height: 100px;
@@ -39,17 +39,15 @@ body {
 	box-shadow:0 2px 8px 1px rgba(0,0,0,0.11);
 	//box-shadow: 0 4px 16px #ccc;
 		a {
-			margin-left: 110px;
+			margin: 0 auto;
 			text-decoration: none;
 			color: #000000;
-
 		}
 }
 .header__about {
 	display: flex;
 	flex-direction: column;
 	background: #FBFAFA;
-
 	max-width: 840px;
 	margin: 20px auto 0 auto;
 	margin-bottom: 40px;
@@ -62,11 +60,9 @@ body {
 			height: 125px;
 			color: #555559;
 			margin-bottom: 70px;
-
 		}
 }
 .h1__png {
-
 	width: 93px;
 	height: 93px;
 	align-content: center;
@@ -74,12 +70,11 @@ body {
 	margin: 30px auto 0 auto;
 }
 .header__btn {
-
 	width: 311px;
 	height: 66px;
 	background: #286782;
 	display: block;
-	margin: 0 auto;
+	margin: 20px auto 0 auto;
 	justify-content: center;
 	align-content: center;
 	border-radius: 6px;
