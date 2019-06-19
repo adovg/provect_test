@@ -1,0 +1,1 @@
+{"version":3,"sources":["main.scss"],"names":[],"mappings":"AAAA,EACC,OAAA,EACA,QAAA,EACA,mBAAA,WAAA,WAAA,WAED,KACC,UAAA,OACA,YAAA,WAAA,CAAA","file":"style.css","sourcesContent":["* {\n\tmargin: 0;\n\tpadding: 0;\n\tbox-sizing: border-box;\n}\nbody {\n\tmin-width: 1440px;\n\tfont-family: 'Open Sans', sans-serif;\n}"]}
