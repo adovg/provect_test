@@ -1,0 +1,25 @@
+
+@media (max-width:768px) {
+  .footer {
+    flex-direction: column;
+
+  }
+}
+
+@media (max-width:768px) {
+  .food__content .food__content-reverse {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+    flex-direction: column;
+    align-items: center;
+    margin: 5px;
+  }
+}
+
+@media (max-width:768px) {
+  .menu {
+    flex-direction: column;
+    font-size: 40px;
+  }
+}
