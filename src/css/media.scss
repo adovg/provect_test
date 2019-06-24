@@ -7,13 +7,37 @@
 }
 
 @media (max-width:768px) {
-  .food__content .food__content-reverse {
+  .food__content {
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: column;
+    align-items: center;
+    margin-bottom: -5px;
+  }
+}
+
+
+@media (max-width:768px) {
+  .food__content-reverse {
     display: flex;
     flex-wrap: wrap;
     justify-content: space-around;
     flex-direction: column;
     align-items: center;
-    margin: 5px;
+    margin-bottom: -5px;
+  }
+}
+
+@media (max-width:520px) {
+    img {
+      width: 200px;
+      height: 340px;
+      }
+  }
+
+@media (max-width:720px) {
+  body {
+    max-width: 720px;
   }
 }
 
