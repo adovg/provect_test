@@ -1,17 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="5a61f01d-794d-415e-8d90-12c1a7432ed6" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/src/css/mixins.scss" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/vcs.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/vcs.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/build/css/style.css" beforeDir="false" afterPath="$PROJECT_DIR$/build/css/style.css" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/build/css/style.css.map" beforeDir="false" afterPath="$PROJECT_DIR$/build/css/style.css.map" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/index.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/css/color.scss" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/css/main.scss" beforeDir="false" afterPath="$PROJECT_DIR$/src/css/main.scss" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/css/media.scss" beforeDir="false" afterPath="$PROJECT_DIR$/src/css/media.scss" afterDir="false" />
-    </list>
+    <list default="true" id="5a61f01d-794d-415e-8d90-12c1a7432ed6" name="Default Changelist" comment="" />
     <ignored path="$PROJECT_DIR$/.tmp/" />
     <ignored path="$PROJECT_DIR$/temp/" />
     <ignored path="$PROJECT_DIR$/tmp/" />
@@ -161,12 +151,12 @@
       <workItem from="1561362613567" duration="17069000" />
       <workItem from="1561382673781" duration="525000" />
       <workItem from="1561383712116" duration="5115000" />
-      <workItem from="1561733010273" duration="8955000" />
+      <workItem from="1561733010273" duration="9112000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="83017000" />
+    <option name="totallyTimeSpent" value="83174000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="0" y="25" width="1366" height="743" extended-state="6" />
